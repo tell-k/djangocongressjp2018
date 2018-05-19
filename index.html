@@ -102,7 +102,7 @@
 </ul>
 </li>
 <li>機能テスト<ul>
-<li>製品自体を使って（例えばブラウザを使って）、あるシナリオをテストします。確実に想定した動作をするかといった内部構造は考慮しません。</li>
+<li>ユーザーから見える範囲での機能を（例えばブラウザを使って）テストします。確実に想定した動作をするかといった内部構造は考慮しません。</li>
 </ul>
 </li>
 </ul>
@@ -127,11 +127,12 @@
 <ul class="simple">
 <li>テスト設置場所</li>
 <li>テストケースを書く</li>
-<li>テストを時刻する</li>
+<li>テストを実行する</li>
 <li>フィクスチャー</li>
 <li>モック</li>
 <li>コードカバレッジ</li>
 <li>雑多なネタ</li>
+<li>まとめ</li>
 </ul>
 </div>
 <div class="section" id="id12">
@@ -140,7 +141,7 @@
 <div class="section" id="id13">
 <h2>テスト設置場所<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Djagnoアプリの直下にtestsパッケージを用意</li>
+<li>Djagnoアプリの直下に <code class="docutils literal notranslate"><span class="pre">tests</span></code> パッケージを用意</li>
 <li>アプリ内のモジュールに対応する、モジュールを作成する</li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sample
@@ -218,9 +219,9 @@
 </div>
 </div>
 <div class="section" id="id17">
-<h2>Pylons 単体テストガイド<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<h2>Pylons 単体テストガイドライン<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>ここでは以下のルールに沿って書いています。</li>
+<li>ここでは以下のルールに沿っています。</li>
 <li><a class="reference external" href="http://docs.pylonsproject.jp/en/latest/community/testing.html#id3">ルール: テスト対象のモジュールをテストモジュールのスコープでインポートしない</a></li>
 <li><a class="reference external" href="http://docs.pylonsproject.jp/en/latest/community/testing.html#id3">ルール: 各テストケースメソッドは、 1つのことだけをテストする</a></li>
 </ul>
@@ -1140,8 +1141,8 @@ $ tox -e flake8 # flake8のtestenvだけ実行される
 <h2>Kent Beck のお言葉<a class="headerlink" href="#kent-beck" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Tests are the Programmer’s Stone, transmuting fear into boredom</li>
-<li>テストはプログラマーの石(?)で、恐れを退屈に変えます。</li>
-<li>不安が退屈に変わるまでテストしよう。</li>
+<li>テストはプログラマーの石(?)、恐れを退屈に変えてくれます。</li>
+<li><strong>不安が退屈に変わるまでテストしよう</strong></li>
 </ul>
 </div>
 <div class="section" id="id64">
