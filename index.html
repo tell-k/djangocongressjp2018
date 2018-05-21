@@ -4,12 +4,26 @@
   <head>
     <title>できる！Djangoでテスト!</title>
     <meta charset='utf-8'>
+    <meta property="og:url" content="https://tell-k.github.io/djangocongressjp2018/" />
+    <meta property="og:site_name" content="gihub" />
+    <meta property="og:title" content="できる！Djangoでテスト!" />
+    <meta property="og:description" content="DjangoCongress JP 2018 の発表資料です。ユニットテストを中心にDjangoでテストの書き方などをまとめて発表します" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://tell-k.github.io/djangocongressjp2018/_static/img/ogp.png">
+    <meta property="article:author" content="https://github.com/tell-k" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@github">
+    <meta name="twitter:creator" content="@tell-k">
+    <meta name="twitter:title" content="できる！Djangoでテスト!">
+    <meta name="twitter:description" content="DjangoCongress JP 2018 の発表資料です。ユニットテストを中心にDjangoでテストの書き方などをまとめて発表します">
+    <meta name="twitter:image" content="https://tell-k.github.io/djangocongressjp2018/_static/img/ogp.png">
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
   </head>
   <body style='display: none'>
-    
+
   <div class="section" id="django">
 <h1>できる！Djangoでテスト!<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
@@ -960,7 +974,7 @@ $ python manage.py <span class="nb">test</span> spam.tests.test_models.TestSpamC
 <h2>Eメール送信のテストは<a class="headerlink" href="#e" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">manage.py</span> <span class="pre">test</span></code> では <strong>実際にメールは送信されない</strong></li>
-<li>送信内容 <code class="docutils literal notranslate"><span class="pre">mail.otubox</span></code> から取得可能 + それをテストする</li>
+<li>送信内容 <code class="docutils literal notranslate"><span class="pre">mail.outbox</span></code> から取得可能 + それをテストする</li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.core</span> <span class="kn">import</span> <span class="n">mail</span>
 <span class="kn">from</span> <span class="nn">django.test</span> <span class="kn">import</span> <span class="n">TestCase</span>
