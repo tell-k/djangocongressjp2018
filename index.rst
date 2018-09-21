@@ -1040,37 +1040,37 @@ tox
 tox の 設定
 =========================================
 
-.. code-block:: text
+:: 
 
- [tox]
- envlist = py36, flake8
- skipsdist = true
- 
- [testenv]
- deps = -r{toxinidir}/dev-requires.txt
- 
- setenv =
-   DJANGO_SETTINGS_MODULE = settings.test
- 
- changedir = {toxinidir}/src
- commands = coverage run --omit 'manage.py','*/migrations/*' python manage.py test {posargs}
- 
- [testenv:flake8]
- deps =
-   flake8
-   mccabe
- 
- commands = flake8 .
- 
- [flake8]
- exclude = tests/*, */migrations/*, urls.py, manage.py
- max-line-length = 100
+  [tox]
+  envlist = py36, flake8
+  skipsdist = true
+  
+  [testenv]
+  deps = -r{toxinidir}/dev-requires.txt
+  
+  setenv =
+    DJANGO_SETTINGS_MODULE = settings.test
+  
+  changedir = {toxinidir}/src
+  commands = coverage run --omit "manage.py","*/migrations/\*" python manage.py test {posargs}
+   
+  [testenv:flake8]
+  deps =
+    flake8
+    mccabe
+  
+  commands = flake8 .
+  
+  [flake8]
+  exclude = tests/\*, \*/migrations/\*, urls.py, manage.py
+  max-line-length = 100
  
 
 tox の 実行
 =========================================
 
-.. code-block:: python
+.. code-block:: bash
 
  $ tox # 全ての testenv が実行される
  $ tox -e flake8 # flake8のtestenvだけ実行される
