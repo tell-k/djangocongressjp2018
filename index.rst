@@ -1119,7 +1119,7 @@ Kent Beck のお言葉
 参考
 ===============================
 
-* https://github.com/tell-k/djangocongressjp2018/blob/gh-pages/reference.rst
+* https://github.com/tell-k/djangocongressjp2018/blob/master/reference.rst
 * Webページ や 書籍 の著者の皆さん 本当に ありがとうございます。m(_ _)m
 
 
