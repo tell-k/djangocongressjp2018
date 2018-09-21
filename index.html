@@ -40,7 +40,7 @@
 <h1>できる！Djangoでテスト!<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line">tell-k</div>
-<div class="line">DjangoCongress JP 2018</div>
+<div class="line">DjangoCongress JP 2018 (2018.05.19)</div>
 </div>
 <div class="section" id="id1">
 <h2>おまえ誰よ？<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -1095,36 +1095,36 @@ $ python manage.py <span class="nb">test</span> spam.tests.test_models.TestSpamC
 </div>
 <div class="section" id="id59">
 <h2>tox の 設定<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[tox]
-envlist = py36, flake8
-skipsdist = true
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tox</span><span class="p">]</span>
+<span class="n">envlist</span> <span class="o">=</span> <span class="n">py36</span><span class="p">,</span> <span class="n">flake8</span>
+<span class="n">skipsdist</span> <span class="o">=</span> <span class="n">true</span>
 
-[testenv]
-deps = -r{toxinidir}/dev-requires.txt
+<span class="p">[</span><span class="n">testenv</span><span class="p">]</span>
+<span class="n">deps</span> <span class="o">=</span> <span class="o">-</span><span class="n">r</span><span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">dev</span><span class="o">-</span><span class="n">requires</span><span class="o">.</span><span class="n">txt</span>
 
-setenv =
-  DJANGO_SETTINGS_MODULE = settings.test
+<span class="n">setenv</span> <span class="o">=</span>
+  <span class="n">DJANGO_SETTINGS_MODULE</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">test</span>
 
-changedir = {toxinidir}/src
-commands = coverage run --omit &#39;manage.py&#39;,&#39;*/migrations/*&#39; python manage.py test {posargs}
+<span class="n">changedir</span> <span class="o">=</span> <span class="p">{</span><span class="n">toxinidir</span><span class="p">}</span><span class="o">/</span><span class="n">src</span>
+<span class="n">commands</span> <span class="o">=</span> <span class="n">coverage</span> <span class="n">run</span> <span class="o">--</span><span class="n">omit</span> <span class="s2">&quot;manage.py&quot;</span><span class="p">,</span><span class="s2">&quot;*/migrations/\*&quot;</span> <span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span> <span class="p">{</span><span class="n">posargs</span><span class="p">}</span>
 
-[testenv:flake8]
-deps =
-  flake8
-  mccabe
+<span class="p">[</span><span class="n">testenv</span><span class="p">:</span><span class="n">flake8</span><span class="p">]</span>
+<span class="n">deps</span> <span class="o">=</span>
+  <span class="n">flake8</span>
+  <span class="n">mccabe</span>
 
-commands = flake8 .
+<span class="n">commands</span> <span class="o">=</span> <span class="n">flake8</span> <span class="o">.</span>
 
-[flake8]
-exclude = tests/*, */migrations/*, urls.py, manage.py
-max-line-length = 100
+<span class="p">[</span><span class="n">flake8</span><span class="p">]</span>
+<span class="n">exclude</span> <span class="o">=</span> <span class="n">tests</span><span class="o">/</span>\<span class="o">*</span><span class="p">,</span> \<span class="o">*/</span><span class="n">migrations</span><span class="o">/</span>\<span class="o">*</span><span class="p">,</span> <span class="n">urls</span><span class="o">.</span><span class="n">py</span><span class="p">,</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span>
+<span class="nb">max</span><span class="o">-</span><span class="n">line</span><span class="o">-</span><span class="n">length</span> <span class="o">=</span> <span class="mi">100</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id60">
 <h2>tox の 実行<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>$ tox # 全ての testenv が実行される
-$ tox -e flake8 # flake8のtestenvだけ実行される
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tox <span class="c1"># 全ての testenv が実行される</span>
+$ tox -e flake8 <span class="c1"># flake8のtestenvだけ実行される</span>
 </pre></div>
 </div>
 </div>
