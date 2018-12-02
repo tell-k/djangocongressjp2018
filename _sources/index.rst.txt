@@ -8,8 +8,7 @@
 おまえ誰よ？
 =====================================
 
-.. image:: https://pbs.twimg.com/profile_images/775582814871752704/J1TaucBz_400x400.jpg
-   :width: 20%
+.. image:: https://pbs.twimg.com/profile_images/1045138776224231425/3GD8eWeG_200x200.jpg
 
 * tell-k
 * BePROUD.inc
