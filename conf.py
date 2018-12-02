@@ -115,6 +115,8 @@ html_theme = "gopher"
 # documentation.
 #html_theme_options = {}
 html_theme_options  = {
+   'canonical':'https://tell-k.github.io/djangocongressjp2018',
+
    'ogp_image':'https://tell-k.github.io/djangocongressjp2018/_static/img/ogp.png',
    'ogp_description': 'DjangoCongress JP 2018 の発表資料です。ユニットテストを中心に、Djangoにおけるテストの始めかた、ツールの導入/使い方など、発表者が普段実践してる内容をお話いたします。',
 
